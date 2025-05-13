@@ -1120,3 +1120,9 @@ a:focus {
     color: #222222;
 }
 
+.contact-form {
+  display: grid;
+  height: 106px;
+  font-size: 35px;
+}
+

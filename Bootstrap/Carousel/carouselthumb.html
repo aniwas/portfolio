@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel With Thumbnail Strip</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #0f172a;
+        color: #fff;
+      }
+
+      .carousel-wrapper {
+        max-width: 980px;
+        margin: 40px auto;
+      }
+
+      .carousel-item img {
+        height: auto;
+        object-fit: cover;
+      }
+
+      .thumbnail-strip {
+        margin-top: 12px;
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding: 8px 2px;
+        scroll-behavior: smooth;
+      }
+
+      .thumbnail-strip button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        border-radius: 8px;
+        overflow: hidden;
+        flex: 0 0 auto;
+        opacity: 0.6;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .thumbnail-strip button img {
+        width: 98px;
+        height: 62px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .thumbnail-strip button.active {
+        opacity: 1;
+        outline: 3px solid #22d3ee;
+        transform: translateY(-2px);
+      }
+
+      .thumbnail-strip button:hover {
+        opacity: 0.95;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container carousel-wrapper">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/041/166/062/small_2x/ai-generated-hawk-high-quality-image-free-photo.jpg"
+              class="d-block w-100"
+              alt="Hawk"
+            />
+            <div class="carousel-caption">
+              <h5>Hawk</h5>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small_2x/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg"
+              class="d-block w-100"
+              alt="Strawberry"
+            />
+            <div class="carousel-caption"><h5>Strawberry</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small_2x/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg"
+              class="d-block w-100"
+              alt="Tiger"
+            />
+            <div class="carousel-caption"><h5>Tiger</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/069/257/967/small_2x/vibrant-green-parrot-perched-on-a-branch-photo.jpg"
+              class="d-block w-100"
+              alt="Parrot"
+            />
+            <div class="carousel-caption"><h5>Parrot</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/060/117/855/small_2x/red-rose-is-the-main-focus-of-the-image-with-a-blue-background-and-a-few-other-flowers-in-the-background-the-rose-is-the-most-prominent-and-beautiful-flower-in-the-picture-photo.jpeg"
+              class="d-block w-100"
+              alt="Rose"
+            />
+            <div class="carousel-caption"><h5>Rose</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/023/329/367/small_2x/beautiful-image-in-nature-of-monarch-butterfly-on-lantana-flower-generative-ai-photo.jpg"
+              class="d-block w-100"
+              alt="Butterfly"
+            />
+            <div class="carousel-caption"><h5>Butterfly</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/045/132/934/small_2x/a-beautiful-picture-of-the-eiffel-tower-in-paris-the-capital-of-france-with-a-wonderful-background-in-wonderful-natural-colors-photo.jpg"
+              class="d-block w-100"
+              alt="Eiffel Tower"
+            />
+            <div class="carousel-caption"><h5>Eiffel Tower</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/068/964/462/small_2x/vibrant-hummingbird-feeding-red-flower-2023-photo.jpg"
+              class="d-block w-100"
+              alt="Hummingbird"
+            />
+            <div class="carousel-caption"><h5>Hummingbird</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/052/945/507/small_2x/wild-houres-picture-photo.jpg"
+              class="d-block w-100"
+              alt="Horse"
+            />
+            <div class="carousel-caption"><h5>Horse</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/027/001/145/small_2x/set-of-yellow-flowers-sunflowers-with-leaves-botanical-picture-floral-design-for-digital-content-photo.jpg"
+              class="d-block w-100"
+              alt="Sunflowers"
+            />
+            <div class="carousel-caption"><h5>Sunflowers</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/054/572/312/small_2x/this-image-features-a-hoverfly-perched-on-a-green-stem-highlighting-its-striking-yellow-and-black-colors-photo.jpg"
+              class="d-block w-100"
+              alt="Hoverfly"
+            />
+            <div class="carousel-caption"><h5>Hoverfly</h5></div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/024/815/857/small_2x/ai-generated-picture-of-little-red-riding-hood-fairytale-personage-walking-in-the-forest-with-basket-in-her-hand-photo.jpeg"
+              class="d-block w-100"
+              alt="Little Red Riding Hood"
+            />
+            <div class="carousel-caption"><h5>Little Red Riding Hood</h5></div>
+          </div>
+        </div>
+
+        <div class="thumbnail-strip" id="thumbnailStrip">
+          <button type="button" class="active" data-bs-slide-to="0" aria-label="Slide 1">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/041/166/062/small_2x/ai-generated-hawk-high-quality-image-free-photo.jpg"
+              alt="Hawk thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="1" aria-label="Slide 2">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small_2x/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg"
+              alt="Strawberry thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="2" aria-label="Slide 3">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small_2x/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg"
+              alt="Tiger thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="3" aria-label="Slide 4">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/069/257/967/small_2x/vibrant-green-parrot-perched-on-a-branch-photo.jpg"
+              alt="Parrot thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="4" aria-label="Slide 5">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/060/117/855/small_2x/red-rose-is-the-main-focus-of-the-image-with-a-blue-background-and-a-few-other-flowers-in-the-background-the-rose-is-the-most-prominent-and-beautiful-flower-in-the-picture-photo.jpeg"
+              alt="Rose thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="5" aria-label="Slide 6">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/023/329/367/small_2x/beautiful-image-in-nature-of-monarch-butterfly-on-lantana-flower-generative-ai-photo.jpg"
+              alt="Butterfly thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="6" aria-label="Slide 7">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/045/132/934/small_2x/a-beautiful-picture-of-the-eiffel-tower-in-paris-the-capital-of-france-with-a-wonderful-background-in-wonderful-natural-colors-photo.jpg"
+              alt="Eiffel Tower thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="7" aria-label="Slide 8">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/068/964/462/small_2x/vibrant-hummingbird-feeding-red-flower-2023-photo.jpg"
+              alt="Hummingbird thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="8" aria-label="Slide 9">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/052/945/507/small_2x/wild-houres-picture-photo.jpg"
+              alt="Horse thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="9" aria-label="Slide 10">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/027/001/145/small_2x/set-of-yellow-flowers-sunflowers-with-leaves-botanical-picture-floral-design-for-digital-content-photo.jpg"
+              alt="Sunflowers thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="10" aria-label="Slide 11">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/054/572/312/small_2x/this-image-features-a-hoverfly-perched-on-a-green-stem-highlighting-its-striking-yellow-and-black-colors-photo.jpg"
+              alt="Hoverfly thumbnail"
+            />
+          </button>
+          <button type="button" data-bs-slide-to="11" aria-label="Slide 12">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/024/815/857/small_2x/ai-generated-picture-of-little-red-riding-hood-fairytale-personage-walking-in-the-forest-with-basket-in-her-hand-photo.jpeg"
+              alt="Little Red Riding Hood thumbnail"
+            />
+          </button>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carouselEl = document.querySelector('#carouselExampleCaptions');
+        const thumbnails = Array.from(
+          document.querySelectorAll('#thumbnailStrip button')
+        );
+
+        const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+
+        function setActiveThumbnail(index) {
+          thumbnails.forEach((thumb) => thumb.classList.remove('active'));
+
+          const activeThumb = thumbnails[index];
+          if (!activeThumb) return;
+
+          activeThumb.classList.add('active');
+          activeThumb.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest',
+          });
+        }
+
+        thumbnails.forEach((thumb) => {
+          thumb.addEventListener('click', function () {
+            const slideTo = Number(this.dataset.bsSlideTo);
+            if (Number.isInteger(slideTo)) {
+              bsCarousel.to(slideTo);
+            }
+          });
+        });
+
+        carouselEl.addEventListener('slid.bs.carousel', function (event) {
+          setActiveThumbnail(event.to);
+        });
+
+        const activeSlide = carouselEl.querySelector('.carousel-item.active');
+        const slides = Array.from(carouselEl.querySelectorAll('.carousel-item'));
+        const initialIndex = Math.max(0, slides.indexOf(activeSlide));
+        setActiveThumbnail(initialIndex);
+      });
+    </script>
+  </body>
+</html>

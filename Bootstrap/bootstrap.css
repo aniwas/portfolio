@@ -1,0 +1,111 @@
+body {
+        background: #0f172a;
+        color: #fff;
+      }
+
+      .carousel-wrapper {
+        max-width: 980px;
+        margin: 40px auto;
+      }
+
+      .carousel-item img {
+        height: auto;
+        object-fit: cover;
+      }
+
+      .thumbnail-strip {
+        margin-top: 12px;
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding: 8px 2px;
+        scroll-behavior: smooth;
+      }
+
+      .thumbnail-strip button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        border-radius: 8px;
+        overflow: hidden;
+        flex: 0 0 auto;
+        opacity: 0.6;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .thumbnail-strip button img {
+        width: 98px;
+        height: 62px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .thumbnail-strip button.active {
+        opacity: 1;
+        outline: 3px solid #22d3ee;
+        transform: translateY(-2px);
+      }
+
+      .thumbnail-strip button:hover {
+        opacity: 0.95;
+      }
+
+      .nav-preview-img {
+        width: 80px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 2px solid white;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: auto;
+      }
+
+      .thumbnail-strip {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        margin-top: 15px;
+        padding-bottom: 10px;
+        scroll-behavior: smooth;
+      }
+
+      .thumbnail-strip::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .thumbnail-strip::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+
+      .thumbnail-strip img {
+        width: 100px;
+        height: 60px;
+        object-fit: cover;
+        cursor: pointer;
+        opacity: 0.6;
+        border-radius: 6px;
+        transition: 0.3s;
+        border: 2px solid transparent;
+      }
+
+      .thumbnail-strip img.active {
+        opacity: 1;
+        border: 2px solid #fff;
+        transform: scale(1.1);
+      }
+
+      .nav-pills .nav-link {
+            margin-bottom: 5px;
+        }
+        .nav-pills .nav-link img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .tab-content {
+            margin-top: 20px;
+        }
